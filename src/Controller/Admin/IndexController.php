@@ -321,6 +321,7 @@ class IndexController extends AbstractActionController
      * @param array $errors
      * @throws Exception
      */
+    protected function executeCommand($command, &$status, &$output, &$errors)
     {
         // Using proc_open() instead of exec() solves a problem where exec('convert')
         // fails with a "Permission Denied" error because the current working
